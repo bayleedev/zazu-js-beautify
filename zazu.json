@@ -3,13 +3,13 @@
   "blocks": {
     "input": [
       {
-        "id": "beautify",
+        "id": "Beautify",
         "type": "Keyword",
         "keyword": "beautify",
         "title": "Beautify your clipboard's JavaScript!",
         "icon": "fa-code",
         "connections": [
-          "process"
+          "Process"
         ]
       }
     ],
@@ -18,12 +18,18 @@
         "id": "Process",
         "type": "UserScript",
         "script": "index.js",
-        "connections": ["Copy"]
+        "connections": ["Copy", "Notify"]
       },
       {
         "id": "Copy",
         "type": "CopyToClipboard",
         "text": "{value}"
+      },
+      {
+        "id": "Notify",
+        "type": "SendNotification",
+        "title": "Beautified!",
+        "message": "Your beautiful JavaScript has been copied to your clipbaord."
       }
     ]
   }
