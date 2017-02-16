@@ -7,7 +7,7 @@
         "type": "Keyword",
         "keyword": "beautify",
         "title": "Beautify your clipboard's JavaScript!",
-        "icon": "fa-code",
+        "icon": "./icon.png",
         "connections": [
           "Process"
         ]
