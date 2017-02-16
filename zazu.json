@@ -1,44 +1,29 @@
 {
-  "name": "zazu-template",
-  "version": "1.0.0",
-  "description": "Zazu Template for starting your own plugin.",
+  "name": "zazu-js-beautify",
   "blocks": {
     "input": [
       {
-        "id": "template",
+        "id": "beautify",
         "type": "Keyword",
-        "keyword": "template",
-        "title": "Zazu Template",
-        "subtitle": "Goto Zazu Template GitHub Repo",
-        "icon": "fa-files-o",
+        "keyword": "beautify",
+        "title": "Beautify your clipboard's JavaScript!",
+        "icon": "fa-code",
         "connections": [
-          "GoHome"
+          "process"
         ]
-      },
-      {
-        "id": "hello",
-        "type": "Keyword",
-        "keyword": "hello",
-        "title": "Hello!",
-        "subtitle": "Please type your name!",
-        "icon": "fa-hand-spock-o",
-        "connections": ["GoHome"]
-      },
-      {
-        "id": "hello-name",
-        "type": "PrefixScript",
-        "prefix": "hello",
-        "space": true,
-        "args": "Required",
-        "script": "src/hello.js",
-        "connections": ["GoHome"]
       }
     ],
     "output": [
       {
-        "id": "GoHome",
-        "type": "OpenInBrowser",
-        "url": "https://github.com/tinytacoteam/zazu-template"
+        "id": "Process",
+        "type": "UserScript",
+        "script": "index.js",
+        "connections": ["Copy"]
+      },
+      {
+        "id": "Copy",
+        "type": "CopyToClipboard",
+        "text": "{value}"
       }
     ]
   }

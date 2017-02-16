@@ -1,5 +1,5 @@
-## Zazu Template
+## Zazu JS Beautify
 
-[![Build Status](https://travis-ci.org/tinytacoteam/zazu-template.svg?branch=master)](https://travis-ci.org/tinytacoteam/zazu-template)
+[![Build Status](https://travis-ci.org/blainesch/zazu-js-beautify.svg?branch=master)](https://travis-ci.org/blainesch/zazu-js-beautify)
 
-Zazu Template for starting your own plugin.
+Beautify your javascript from your clipboard
